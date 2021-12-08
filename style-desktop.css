@@ -133,6 +133,7 @@ button{
     font-family: var(--secondary-font);
     font-weight: 200;
     font-size: 1rem;
+    font-size: clamp(0.75rem, 2vw, 1rem);
     letter-spacing: 0.25rem;
     margin-bottom: 0.25em;
 }
@@ -141,29 +142,131 @@ button{
     color: var(--secondary-color);
     font-family: var(--primary-font);
     font-weight: 100;
-    font-size: 4.375rem;
+    /* font-size: 4.375rem; */
+    font-size: clamp(2.813rem, 5.5vw, 4.375rem);
     line-height: 5.813rem;
+    line-height: clamp(3.75rem, 8vw, 5.813rem);
     margin-bottom: 0.6em;
 }
 
 .hero-scroll{
-    /* transform: rotate(90deg) translate(-50%, -100%); */
+    /* transform: rotate(90deg) translate(-50%, -200%); */
     position: absolute;
     bottom: 0;
     right: 0;
     display: flex;
-    gap: 1em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 1em; */
     border: 1px solid red;
+    display: none;
 }
 
 .hero-scroll-p{
     color: var(--secondary-color);
     font-family: var(--secondary-font);
     font-size: 1rem;
+    transform: rotate(90deg);
 }
 
 .hero-scroll img{
-    /* transform: rotate(-90deg); */
+    transform: rotate(90deg);
 }
 
 /* hero section ends */
+
+/* problem section starts */
+
+.problem-section{
+    padding: 10em 0;
+}
+
+.problem-heading{
+    font-family: var(--primary-font);
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 5rem;
+    color: var(--primary-color);
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 2em;
+}
+
+.problem-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* border: 1px solid green; */
+}
+
+.problem-feature-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+}
+
+.problem-feature{
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); */
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    /* border: 1px solid red; */
+}
+
+.problem-feature-name{
+    display: inline;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-size: 1.563rem;
+    font-weight: 400;
+    width: 100%;
+    /* border: 1px solid green; */
+    margin-right: 1em;
+}
+
+.problem-feature-hr{
+    /* display: inline-block; */
+    border-bottom: 1px solid var(--primary-color);
+    width: 60%;
+    height: 1px;
+}
+
+.problem-feature-number{
+    width: 3em;
+    height: 3em;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    position: relative;
+    margin-left: 1em;
+}
+
+.problem-feature-number::before{
+    content: attr(number);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-size: 1.563rem;
+    font-weight: 400;
+
+}
+
+.problem-img-section{
+    /* border: 1px solid red; */
+    padding-left: 2em;
+}
+
+.problem-img{
+    border-radius: 3em 0 0 3em;
+    height: 28em;
+    width: 100%;
+}
+
+/* problem section ends */
