@@ -467,7 +467,7 @@ button{
 
 .package-sec-heading{
     font-family: var(--secondary-font);
-    font-size: 2.5rem;
+    /* font-size: 2.5rem; */
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     color: var(--main-color);
 }
@@ -653,3 +653,54 @@ button{
 }
 
 /* newsletter section ends */
+
+/* footer section starts */
+
+.footer-section{
+    background: var(--bg-color);
+    padding: 3.5em 0;
+}
+
+.footer-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo{
+    color: var(--secondary-color);
+    font-family: var(--logo-font);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.footer-logo-detail{
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    font-size: 1.875rem;
+    text-transform: capitalize;
+}
+
+.footer-ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4em;
+    row-gap: 1em;
+}
+
+.footer-li{
+    cursor: pointer;
+}
+
+.footer-a{
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    font-weight: 0.04rem;
+}
+
+/* footer section ends */
