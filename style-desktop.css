@@ -556,7 +556,7 @@ button{
 
 .package-sec-price{
     font-size: 2.813rem;
-    font-size: clamp(2.188rem, 2vw, 2.813rem);
+    font-size: clamp(2.188rem, 3vw, 2.813rem);
 }
 
 .package-sec-price-violet{
