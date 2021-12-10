@@ -594,4 +594,24 @@
 
 /* footer section ends */
 
+/* .footer-bottom-section starts */
+
+.footer-bottom-section{
+  /* background-color: var(--primary-color); */
+}
+
+.footer-bottom-wrap{
+  /* padding: 0.5em 0; */
+}
+
+.footer-bottom-p{
+  /* color: var(--secondary-color); */
+  /* font-family: var(--secondary-font); */
+  /* text-align: center; */
+  /* letter-spacing: 0.04rem; */
+  font-size: 0.75rem;
+}
+
+/* .footer-bottom-section ends */
+
 }
