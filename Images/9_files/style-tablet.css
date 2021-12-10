@@ -361,8 +361,6 @@
 .package-sec-heading{
   /* font-family: var(--secondary-font); */
   font-size: 1.75rem;
-  /* font-size: clamp(2.188rem, 4vw, 1.74rem); */
-  /* font-size: 2.188rem; */
   /* color: var(--main-color); */
 }
 
