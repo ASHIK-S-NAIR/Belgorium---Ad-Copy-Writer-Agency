@@ -116,15 +116,6 @@ button{
     color: var(--secondary-color);
 }
 
-.nav-hr{
-    background-color: transparent;
-    border-bottom: 1px solid var(--secondary-color);
-    display: inline;
-    width: 70%;
-    height: 100%;
-    opacity: 0.8;
-}
-
 .nav-ul{
     display: flex;
 }
@@ -213,9 +204,9 @@ button{
 
 .problem-heading{
     font-family: var(--primary-font);
-    font-size: 3rem;
+    font-size: clamp(1.813rem, 4vw, 3rem);
     font-weight: 100;
-    line-height: 5rem;
+    line-height: clamp(2.813rem, 6vw, 5rem);
     color: var(--primary-color);
     text-align: center;
     text-transform: capitalize;
@@ -249,11 +240,13 @@ button{
     display: inline;
     font-family: var(--secondary-font);
     color: var(--primary-color);
-    font-size: 1.563rem;
+    /* font-size: 1.563rem; */
     font-weight: 400;
     width: 100%;
     /* border: 1px solid green; */
     margin-right: 1em;
+    font-size: clamp(1.125rem, 2vw, 1.563rem);
+    /* line-height: clamp(1.875rem, 3.5vw, 2.813rem); */
 }
 
 .problem-feature-hr{
@@ -265,11 +258,11 @@ button{
 
 .problem-feature-number{
     width: 3em;
-    height: 3em;
-    border: 1px solid var(--primary-color);
+    height: auto;
+    border: 0px solid var(--primary-color);
     border-radius: 50%;
     position: relative;
-    margin-left: 1em;
+    margin-left: 2em;
 }
 
 .problem-feature-number::before{
@@ -282,9 +275,9 @@ button{
     transform: translate(-50%, -50%);
     font-family: var(--secondary-font);
     color: var(--primary-color);
-    font-size: 1.563rem;
+    font-size: clamp(1.125rem, 2vw, 1.563rem);
     font-weight: 400;
-
+    color: var(--main-color);
 }
 
 .problem-img-section{
