@@ -258,12 +258,14 @@
   /* border: 1px solid red; */
   /* padding-left: 2em; */
   padding-left: 0;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .problem-img{
   border-radius: 1em;
   height: 16em;
-  /* width: 100%; */
+  width: 100%;
 }
 
 /* problem section ends */
