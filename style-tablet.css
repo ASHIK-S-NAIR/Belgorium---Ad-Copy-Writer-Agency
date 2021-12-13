@@ -173,6 +173,103 @@
 
   /* hero section ends */
 
+  /* problem section starts */
+
+.problem-section{
+  padding: 5em 0;
+}
+
+.problem-heading{
+  /* font-family: var(--primary-font); */
+  font-size: clamp(1.25rem, 4vw, 1.813rem);
+  /* font-weight: 100; */
+  line-height: 2.813rem;
+  /* color: var(--primary-color); */
+  /* text-align: center; */
+  /* text-transform: capitalize; */
+  margin-bottom: 1.5em;
+}
+
+.problem-container{
+  /* display: grid; */
+  /* grid-template-columns: 50% 50%; */
+  /* border: 1px solid green; */
+}
+
+.problem-feature-section{
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* gap: 1.5em; */
+  /* justify-content: center; */
+}
+
+.problem-feature{
+  /* display: flex; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* width: 80%; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  /* height: auto; */
+  /* border: 1px solid red; */
+}
+
+.problem-feature-name{
+  /* display: inline; */
+  /* font-family: var(--secondary-font); */
+  /* color: var(--primary-color); */
+  /* font-size: 1.563rem; */
+  /* font-weight: 400; */
+  /* width: 100%; */
+  /* border: 1px solid green; */
+  /* margin-right: 1em; */
+  font-size: clamp(0.938rem, 2vw, 1.125rem);
+    line-height: clamp(2.188rem, 1vw 1.875rem);
+}
+
+.problem-feature-hr{
+  /* display: inline-block; */
+  /* border-bottom: 1px solid var(--primary-color); */
+  /* width: 60%; */
+  /* height: 1px; */
+}
+
+.problem-feature-number{
+  /* width: 3em; */
+  /* height: auto; */
+  /* border: 0px solid var(--primary-color); */
+  /* border-radius: 50%; */
+  /* position: relative; */
+  /* margin-left: 2em; */
+}
+
+.problem-feature-number::before{
+  /* content: attr(number); */
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* width: auto; */
+  /* height: auto; */
+  /* transform: translate(-50%, -50%); */
+  /* font-family: var(--secondary-font); */
+  /* color: var(--primary-color); */
+  font-size: clamp(0.938rem, 2vw, 1.125rem);
+  /* font-weight: 400; */
+  /* color: var(--main-color); */
+}
+
+.problem-img-section{
+  /* border: 1px solid red; */
+  padding-left: 2em;
+}
+
+.problem-img{
+  /* border-radius: 3em 0 0 3em; */
+  height: 16em;
+  /* width: 100%; */
+}
+
+/* problem section ends */
+
   /* process section starts */
 
   .process-section {
