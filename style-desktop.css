@@ -66,8 +66,8 @@ body::-webkit-scrollbar {
     margin: 0 auto;
 }
 
-ul{
-    list-style: none;
+li{
+    list-style-type: none;
 }
 
 a{
@@ -354,7 +354,7 @@ button{
     /* font-size: 1rem; */
     font-size: clamp(0.75rem, 1.8vw, 1rem);
     font-weight: 400;
-    line-height: 2rem;
+    /* line-height: 2rem; */
     line-height: clamp(1.45rem, 3vw, 2rem);
     letter-spacing: 0.04rem;
 }
@@ -584,6 +584,82 @@ button{
 }
 
 /* package section ends */
+
+/* testimonial section starts */
+
+.testimonial-section{
+    padding: 5em 0;
+}
+
+.testimonial-wrap{
+    /* border: 1px solid red; */
+}
+
+.testimonial-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonial-head-heading{
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    font-size: clamp(1.813rem, 4vw, 3rem);
+    font-weight: 100;
+    line-height: clamp(2.813rem, 6vw, 5rem);
+    text-transform: capitalize;
+}
+
+.testimonial-head-arrow-section{
+    display: flex;
+    padding: 1.3em 0;
+}
+
+.testimonial-head-right-arrow{
+    transform: rotate(-180deg);
+}
+
+.testimonial-ul{
+    display: flex;
+    gap: 3.3em;
+}
+
+.testimonial-sec{
+    display: flex;
+    gap: 2em;
+    border: 1px solid rgb(175, 173, 173);
+    padding: 1.8em;
+    border-radius: 20px;
+}
+
+.testimonial-details{
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-sec-details-name{
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-weight: 900;
+    /* font-size: 1rem; */
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    margin-bottom: 0.7em;
+    /* letter-spacing: 0.25rem; */
+}
+
+.testimonial-sec-details-p{
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    /* font-size: 1.563rem; */
+    font-size: clamp(0.75rem, 1.8vw, 1.2rem);
+    font-weight: 400;
+    /* opacity: 0.9; */
+    /* letter-spacing: 0.05em; */
+    /* line-height: 2.813rem; */
+    line-height: clamp(1.45rem, 3vw, 2.2rem);
+    /* margin-bottom: 2.5em; */
+}
+
+/* testimonial section ends */
 
 /* newsletter section starts */
 
