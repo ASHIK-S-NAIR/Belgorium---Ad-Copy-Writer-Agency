@@ -106,7 +106,8 @@
   }
 
   .nav-toggle1.active {
-    transform: translateY(0.28em) rotate(45deg);
+    width: 50%;
+    transform: translateY(0.20em) rotate(45deg);
   }
 
   .nav-toggle2.active {
@@ -119,7 +120,8 @@
   }
 
   .nav-toggle3.active {
-    transform: translateY(-0.28em) rotate(45deg);
+    width: 50%;
+    transform: translateY(-0.20em) rotate(45deg);
   }
 
   /* navigation section ends */
