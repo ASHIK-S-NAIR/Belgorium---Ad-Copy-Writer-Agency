@@ -21,6 +21,25 @@
     rgba(12, 186, 186, 0.218186) 156.19%,
     rgba(221, 79, 183, 0) 156.2%
   );
+
+  /* font-size */
+  --heading-font-size: clamp(1.813rem, 4vw, 3rem);
+  --subheading-font-size: clamp(1.125rem, 2vw, 1.563rem);
+
+  /* font-weight */
+  --heading-font-weight: 100;
+  --subheading-font-weight: 400;
+
+  /* line-height */
+  --heading-line-height: clamp(2.813rem, 6vw, 5rem);
+  --subheading-line-height: clamp(1.875rem, 3.5vw, 2.813rem);
+
+  /* padding */
+  --section-padding: 7em 0;
+
+  /* margin */
+  --section-margin: 7em 0;
+
 }
 
 /* default font */
@@ -198,14 +217,14 @@ button {
 /* problem section starts */
 
 .problem-section {
-  padding: 10em 0;
+  padding: var(--section-padding);
 }
 
 .problem-heading {
   font-family: var(--primary-font);
-  font-size: clamp(1.813rem, 4vw, 3rem);
-  font-weight: 100;
-  line-height: clamp(2.813rem, 6vw, 5rem);
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
   color: var(--primary-color);
   text-align: center;
   text-transform: capitalize;
@@ -236,10 +255,10 @@ button {
   display: inline;
   font-family: var(--secondary-font);
   color: var(--primary-color);
-  font-weight: 400;
+  font-weight: var(--subheading-font-weight);
   width: 100%;
   margin-right: 1em;
-  font-size: clamp(1.125rem, 2vw, 1.563rem);
+  font-size: var(--subheading-font-size);
 }
 
 .problem-feature-hr {
@@ -267,8 +286,8 @@ button {
   transform: translate(-50%, -50%);
   font-family: var(--secondary-font);
   color: var(--primary-color);
-  font-size: clamp(1.125rem, 2vw, 1.563rem);
-  font-weight: 400;
+  font-size: var(--subheading-font-size);
+  font-weight: var(--subheading-font-weight);
   color: var(--main-color);
 }
 
@@ -287,7 +306,7 @@ button {
 /* process section starts */
 
 .process-section {
-  padding: 5em 0;
+  padding: var(--section-padding);
 }
 
 .process-head-container {
@@ -299,9 +318,9 @@ button {
 .process-heading {
   font-family: var(--primary-font);
   color: var(--primary-color);
-  font-size: clamp(1.813rem, 4vw, 3rem);
-  font-weight: 100;
-  line-height: clamp(2.813rem, 6vw, 5rem);
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
   text-transform: capitalize;
   width: 80%;
 }
@@ -309,9 +328,9 @@ button {
 .process-subheading {
   font-family: var(--secondary-font);
   color: var(--primary-color);
-  font-size: clamp(1.125rem, 2vw, 1.563rem);
-  font-weight: 400;
-  line-height: clamp(1.875rem, 3.5vw, 2.813rem);
+  font-size: var(--subheading-font-size);
+  font-weight: var(--subheading-font-weight);
+  line-height: var(--subheading-line-height);
 }
 
 .process-section-container {
@@ -382,9 +401,9 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  padding: 5em 0;
+  padding: var(--section-padding);
   z-index: 0;
-  margin: 5em 0;
+  margin: var(--section-margin);
 }
 
 .try-section::before {
@@ -407,9 +426,9 @@ button {
 .try-heading {
   font-family: var(--primary-font);
   color: var(--secondary-color);
-  font-size: clamp(1.813rem, 4vw, 3rem);
-  font-weight: 100;
-  line-height: clamp(2.813rem, 6vw, 5rem);
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
   text-transform: capitalize;
   margin-bottom: 0.4em;
 }
@@ -419,11 +438,11 @@ button {
   margin: 0 auto;
   font-family: var(--secondary-font);
   color: var(--secondary-color);
-  font-size: clamp(1.125rem, 2vw, 1.563rem);
+  font-size: var(--subheading-font-size);
   font-weight: 300;
   opacity: 0.9;
   letter-spacing: 0.05em;
-  line-height: clamp(1.875rem, 3.5vw, 2.813rem);
+  line-height: var(--subheading-line-height);
   margin-bottom: 2.5em;
 }
 
@@ -436,7 +455,7 @@ button {
 /* package section starts */
 
 .package-section {
-  padding: 5em;
+  padding: var(--section-padding);
 }
 
 .package-wrap {
@@ -444,7 +463,6 @@ button {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 3em;
   column-gap: clamp(0.5em, 1.5vw, 3em);
-  width: 100%;
 }
 
 .package-sec {
@@ -599,7 +617,7 @@ button {
 /* newsletter section starts */
 
 .newsletter-section {
-  padding: 3em 0;
+  padding: var(--section-padding);
 }
 
 .newsletter-wrap {
@@ -613,9 +631,9 @@ button {
 .newsletter-heading {
   font-family: var(--primary-font);
   color: var(--primary-color);
-  font-size: clamp(1.813rem, 4vw, 3rem);
-  font-weight: 100;
-  line-height: clamp(2.813rem, 6vw, 5rem);
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
   text-transform: capitalize;
   margin-bottom: 0.4em;
 }
@@ -624,10 +642,10 @@ button {
   margin: 0 auto;
   font-family: var(--secondary-font);
   color: var(--primary-color);
-  font-size: clamp(1.125rem, 2vw, 1.563rem);
-  font-weight: 400;
+  font-size: var(--subheading-font-size);
+  font-weight: var(--subheading-font-weight);
   letter-spacing: 0.05em;
-  line-height: clamp(1.875rem, 3.5vw, 2.813rem);
+  line-height: var(--subheading-line-height);
   margin-bottom: 1.5em;
 }
 
@@ -670,7 +688,7 @@ button {
 /* form section starts */
 
 .form-section {
-  padding: 3em 0;
+  padding:  var(--section-padding);
 }
 
 .form-wrap {
@@ -774,9 +792,9 @@ button {
 .form-details-heading {
   font-family: var(--primary-font);
   color: var(--primary-color);
-  font-size: clamp(1.813rem, 4vw, 3rem);
-  font-weight: 100;
-  line-height: clamp(2.813rem, 6vw, 5rem);
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
   text-transform: capitalize;
   margin-bottom: 0.6em;
 }
@@ -784,10 +802,10 @@ button {
 .form-details-subheading {
   font-family: var(--secondary-font);
   color: var(--primary-color);
-  font-size: clamp(1.125rem, 2vw, 1.563rem);
-  font-weight: 400;
+  font-size: var(--subheading-font-size);
+  font-weight: var(--subheading-font-weight);
   letter-spacing: 0.05em;
-  line-height: clamp(1.875rem, 3.5vw, 2.813rem);
+  line-height: var(--subheading-line-height);
 }
 
 /* form section ends */

@@ -3,6 +3,23 @@
 
   /* variables start*/
   :root {
+    /* font-size */
+    --heading-font-size: clamp(1.25rem, 4vw, 1.813rem);
+    --subheading-font-size: clamp(0.938rem, 2vw, 1.125rem);
+
+    /* font-weight */
+    --heading-font-weight: 100;
+    --subheading-font-weight: 400;
+
+    /* line-height */
+    --heading-line-height: 2.813rem;
+    --subheading-line-height: clamp(2.188rem, 1vw 1.875rem);
+
+    /* padding */
+    --section-padding: 5em 0;
+
+    /* margin */
+    --section-margin: 5em 0;
   }
 
   .wrap {
@@ -107,7 +124,7 @@
 
   .nav-toggle1.active {
     width: 50%;
-    transform: translateY(0.20em) rotate(45deg);
+    transform: translateY(0.2em) rotate(45deg);
   }
 
   .nav-toggle2.active {
@@ -121,7 +138,7 @@
 
   .nav-toggle3.active {
     width: 50%;
-    transform: translateY(-0.20em) rotate(45deg);
+    transform: translateY(-0.2em) rotate(45deg);
   }
 
   /* navigation section ends */
@@ -161,18 +178,11 @@
   }
 
   .problem-heading {
-    font-size: clamp(1.25rem, 4vw, 1.813rem);
-    line-height: 2.813rem;
     margin-bottom: 1.5em;
   }
 
-  .problem-feature-name {
-    font-size: clamp(0.938rem, 2vw, 1.125rem);
-    line-height: clamp(2.188rem, 1vw 1.875rem);
-  }
-
   .problem-feature-number::before {
-    font-size: clamp(0.938rem, 2vw, 1.125rem);
+    font-size: var(--subheading-font-size);
   }
 
   .problem-img-section {
@@ -197,14 +207,7 @@
   }
 
   .process-heading {
-    font-size: clamp(1.25rem, 4vw, 1.813rem);
-    line-height: 2.813rem;
     width: 95%;
-  }
-
-  .process-subheading {
-    font-size: clamp(0.938rem, 2vw, 1.125rem);
-    line-height: clamp(2.188rem, 1vw 1.875rem);
   }
 
   .process-section-container {
@@ -239,15 +242,8 @@
 
   /* try section starts */
 
-  .try-heading {
-    font-size: clamp(1.25rem, 4vw, 1.813rem);
-    line-height: 2.813rem;
-  }
-
   .try-subheading {
     width: 60%;
-    font-size: clamp(0.938rem, 2vw, 1.125rem);
-    line-height: clamp(2.188rem, 1vw 1.875rem);
   }
 
   /* try section ends */
@@ -319,16 +315,6 @@
     padding: 5em 0;
   }
 
-  .newsletter-heading {
-    font-size: clamp(1.25rem, 4vw, 1.813rem);
-    line-height: 2.813rem;
-  }
-
-  .newsletter-subheading {
-    font-size: clamp(0.938rem, 2vw, 1.125rem);
-    line-height: clamp(2.188rem, 1vw 1.875rem);
-  }
-
   .newsletter-form {
     width: 70%;
     height: 3em;
@@ -394,13 +380,6 @@
 
   .form-details-heading {
     width: 80%;
-    font-size: clamp(1.25rem, 4vw, 1.813rem);
-    line-height: 2.813rem;
-  }
-
-  .form-details-subheading {
-    font-size: clamp(0.938rem, 2vw, 1.125rem);
-    line-height: clamp(2.188rem, 1vw 1.875rem);
   }
 
   /* form section ends */
