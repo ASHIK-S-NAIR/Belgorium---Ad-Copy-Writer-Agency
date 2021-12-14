@@ -4,6 +4,7 @@ var nav_toggle2 = document.querySelector(".nav-toggle2");
 var nav_toggle3 = document.querySelector(".nav-toggle3");
 var nav = document.querySelector("nav");
 var nav_a = document.querySelectorAll(".nav-a");
+var nav_section = document.querySelector(".nav-section");
 
 nav_toggle_section.addEventListener("click", () => {
   nav_toggle1.classList.toggle("active");
@@ -20,3 +21,11 @@ document.addEventListener("click", (e) => {
     nav.classList.toggle("active");
   }
 });
+
+window.addEventListener('scroll', () => {
+  if(pageYOffset > (window.innerHeight - 100)){
+    nav_section.classList.add('sticky');
+  }else{
+    nav_section.classList.remove('sticky');
+  }
+})

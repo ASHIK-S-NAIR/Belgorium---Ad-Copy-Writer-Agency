@@ -15,7 +15,6 @@
   --secondary-color: #fff;
   --main-color: #3C0466;
   --special-color: #9765c3;
-  /* --bg-color: linear-gradient(93.73deg, rgba(60, 4, 102, 0.9) 43.85%, rgba(73, 13, 201, 0.756) 123.12%, rgba(12, 186, 186, 0.218186) 156.19%, rgba(221, 79, 183, 0) 156.2%); */
   --bg-color: linear-gradient(93.73deg, rgb(60,4,102) 43.85%, rgba(73, 13, 201, 0.756) 123.12%, rgba(12, 186, 186, 0.218186) 156.19%, rgba(221, 79, 183, 0) 156.2%);
 
 }
@@ -61,6 +60,10 @@ body::-webkit-scrollbar {
   box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .wrap{
     width: 85%;
     margin: 0 auto;
@@ -73,11 +76,13 @@ li{
 a{
     text-decoration: none;
     cursor: pointer;
+    z-index: 1;
 }
 
 button{
     border: none;
     outline: none;
+    /* z-index: 10; */
     cursor: pointer;
 }
 
@@ -91,6 +96,13 @@ button{
     padding: 0.8em 2em;
     display: flex;
     gap: 1.3em;
+    transition: 0.1s border ease;
+}
+
+.btn-outline:hover{
+    border: 2px solid var(--secondary-color);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
 }
 
 /* general settings ends */
@@ -100,8 +112,15 @@ button{
 .nav-section{
     background-color: transparent;
     width: 100%;
+    height: auto;
+    /* border: 1px solid red; */
     position: fixed;
-    inset: 0;
+    inset: 0 0 auto 0;
+    z-index: 10;
+}
+
+.nav-section.sticky{
+    background: var(--bg-color);
 }
 
 .nav-wrap{
@@ -378,7 +397,7 @@ button{
     background-size: cover;
     position: relative;
     padding: 5em 0;
-    z-index: -1;
+    z-index: 0;
     margin: 5em 0;
 }
 
@@ -390,7 +409,7 @@ button{
     top: 0;
     left: 0;
     background: var(--bg-color);
-    opacity: 0.95;
+    opacity: 0.9;
     z-index: -1;
 }
 
@@ -574,6 +593,12 @@ button{
     font-size: clamp(1.125rem, 2vw, 1.563rem);
     font-weight: 600;
     background-color: transparent;
+    transition: 0.1s border ease;
+}
+
+.package-sec-btn:hover{
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    border: 2px solid var(--main-color);
 }
 
 .package-sec-btn-violet{
@@ -583,83 +608,12 @@ button{
     box-shadow: 0px 0px 3px var(--special-color);
 }
 
+.package-sec-btn-violet:hover{
+    /* box-shadow: 2px 2px 10px rgba(0,0,0,0.3); */
+    border: 2px solid var(--special-color);
+}
+
 /* package section ends */
-
-/* testimonial section starts */
-
-.testimonial-section{
-    padding: 5em 0;
-}
-
-.testimonial-wrap{
-    /* border: 1px solid red; */
-}
-
-.testimonial-head{
-    display: flex;
-    justify-content: space-between;
-}
-
-.testimonial-head-heading{
-    font-family: var(--primary-font);
-    color: var(--primary-color);
-    font-size: clamp(1.813rem, 4vw, 3rem);
-    font-weight: 100;
-    line-height: clamp(2.813rem, 6vw, 5rem);
-    text-transform: capitalize;
-}
-
-.testimonial-head-arrow-section{
-    display: flex;
-    padding: 1.3em 0;
-}
-
-.testimonial-head-right-arrow{
-    transform: rotate(-180deg);
-}
-
-.testimonial-ul{
-    display: flex;
-    gap: 3.3em;
-}
-
-.testimonial-sec{
-    display: flex;
-    gap: 2em;
-    border: 1px solid rgb(175, 173, 173);
-    padding: 1.8em;
-    border-radius: 20px;
-}
-
-.testimonial-details{
-    display: flex;
-    flex-direction: column;
-}
-
-.testimonial-sec-details-name{
-    color: var(--primary-color);
-    font-family: var(--secondary-font);
-    font-weight: 900;
-    /* font-size: 1rem; */
-    font-size: clamp(0.75rem, 2vw, 1rem);
-    margin-bottom: 0.7em;
-    /* letter-spacing: 0.25rem; */
-}
-
-.testimonial-sec-details-p{
-    font-family: var(--secondary-font);
-    color: var(--primary-color);
-    /* font-size: 1.563rem; */
-    font-size: clamp(0.75rem, 1.8vw, 1.2rem);
-    font-weight: 400;
-    /* opacity: 0.9; */
-    /* letter-spacing: 0.05em; */
-    /* line-height: 2.813rem; */
-    line-height: clamp(1.45rem, 3vw, 2.2rem);
-    /* margin-bottom: 2.5em; */
-}
-
-/* testimonial section ends */
 
 /* newsletter section starts */
 
@@ -727,6 +681,12 @@ button{
     border-radius: 0 3em 3em 0;
     font-family: var(--secondary-font);
     font-size: 1.4rem;
+    transition: 0.1s font-weight ease-in;
+}
+
+.newsletter-btn:hover{
+    font-weight: 500;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* newsletter section ends */
@@ -804,8 +764,14 @@ button{
     border-radius: 20px;
     /* font-size: 1.563rem; */
     font-size: clamp(1.125rem, 2vw, 1.563rem);
-    font-weight: 500;
+    font-weight: 100;
     background-color: var(--main-color);
+    transition: 0.1s font-weight ease;
+}
+
+.form-form-btn:hover{
+    /* font-weight: 500; */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .form-form-input:focus + .form-form-label,
